@@ -1,0 +1,14 @@
+
+<h1>Géneros</h1>
+<table class="table table-striped">
+    <tbody>
+    <tr class="text-primary">
+        <td>Género</td>
+        <td>Albums</td>
+    </tr>
+    <tr ng-repeat="genre in genres">
+        <td class="col-md-3">{{ genre.name }}</td>
+        <td albums-table albums="genre.albums"></td>
+    </tr>
+    </tbody>
+</table>

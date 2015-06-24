@@ -1,0 +1,16 @@
+<td>
+    <table class="table table-striped">
+        <tbody>
+        <tr style="background-color: #122b40">
+            <td class="text-danger">Portada</td>
+            <td class="text-danger">Título</td>
+            <td class="text-danger">Año</td>
+        </tr>
+        <tr ng-repeat="album in albums">
+            <td><img ng-src="{{ routeImage(album.id) }}"/></td>
+            <td class="col-md-5">{{ album.title}}</td>
+            <td class="col-md-1">{{ album.year}}</td>
+        </tr>
+        </tbody>
+    </table>
+</td>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="JevitecaApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<div class="jumbotron">
+    <header class="text-center">
+        <h1>JeviTeca</h1>
+        <h3>La librería Heavy mas molona</h3>
+    </header>
+    </div>
+    <div class="container">
+        <nav ng-controller="NavegacionCtrl">
+            <ul class="nav nav-tabs">
+                <li role="presentation" ng-class="{ 'active' : routeIsAlbums() }"><a href="#/albums">Albums</a></li>
+                <li role="presentation" ng-class="{ 'active' : routeIsBands() }"><a href="#/bands">Bandas</a></li>
+                <li role="presentation" ng-class="{ 'active' : routeIsGenres() }"><a href="#/genres">Géneros</a></li>
+            </ul>
+        </nav>
+        <section app-view-segment="0"></section>
+    </div>
+<script src="vendor/angular.min.js"></script>
+<script src="vendor/angular-route.min.js"></script>
+<script src="vendor/angular-locale_es-es.js"></script>
+<script src="vendor/angular-route-segment.js"></script>
+<!-- Controllers -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/NavegacionCtrl.js"></script>
+<script src="scripts/controllers/AlbumsCtrl.js"></script>
+<script src="scripts/controllers/BandsCtrl.js"></script>
+<script src="scripts/controllers/GenresCtrl.js"></script>
+
+<!-- Services -->
+<script src="scripts/services/AlbumsProvider.js"></script>
+<script src="scripts/services/BandsProvider.js"></script>
+<script src="scripts/services/GenresProvider.js"></script>
+
+<!-- Directives -->
+<script src="scripts/directives/AlbumsDirective.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+<h1>Albums</h1>
+<table class="table table-striped">
+    <tbody>
+    <tr class="text-primary">
+        <td>Portada</td>
+        <td>Título</td>
+        <td>Año</td>
+        <td>Banda</td>
+        <td>Género</td>
+    </tr>
+    <tr ng-repeat="album in albums">
+        <td class="col-md-1"><img ng-src="resources/img/{{ album.image }}" class="img-thumbnail img-responsive"></td>
+        <td class="col-md-3">{{ album.title }}</td>
+        <td class="col-md-3">{{ album.year }}</td>
+        <td class="col-md-2">{{ album.band.name }}</td>
+        <td class="col-md-3">{{ album.genre.name }}</td>
+    </tr>
+    </tbody>
+</table>

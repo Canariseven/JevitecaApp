@@ -1,0 +1,17 @@
+<h1>Bandas</h1>
+<table class="table table-striped">
+    <tbody>
+    <tr class="text-primary">
+        <td>Banda</td>
+        <td>Origen</td>
+        <td>Albums</td>
+    </tr>
+    <tr ng-repeat="band in bands">
+        <td class="col-md-3">{{ band.name }}</td>
+        <td class="col-md-3">{{ band.origin }}</td>
+        <td albums-table albums="band.albums">
+        </td>
+
+    </tr>
+    </tbody>
+</table>
