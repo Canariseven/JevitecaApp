@@ -10,8 +10,13 @@ angular.module("JevitecaApp")
             scope: {
                 albums: "="
             },
-            link: function (scope) {
-                scope.routeImage = function (id) {
+            link: function (scope, element) {
+                scope.imageStd = "resources/img/imgDefault.jpg";
+          /*      scope.$evalAsync(function(){
+                    var position = element;
+                    console.log(position);
+                })*/
+                /*scope.routeImage = function (id) {
                     var diferido = $q.defer();
                     $http.get("resources/data/albums.json").then(
                         function (datos) {
@@ -30,7 +35,7 @@ angular.module("JevitecaApp")
                         }
                     );
                     return diferido.promise
-                }
+                }*/
 
             }
         };
