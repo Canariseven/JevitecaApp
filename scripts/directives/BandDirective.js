@@ -2,13 +2,13 @@
  * Created by Canariseven on 23/6/15.
  */
 angular.module("JevitecaApp")
-    .directive("albumsTable", ["AlbumsProvider","$http","$q","$filter", function (AlbumsProvider,$http,$q,$filter) {
+    .directive("band", [function () {
         return {
             restrict: "AE",
-            templateUrl: "views/AlbumsTable.html",
+            templateUrl: "views/Band.html",
             replace: true,
             scope: {
-                albums: "="
+                model: "="
             },
             link: function (scope, element) {
 

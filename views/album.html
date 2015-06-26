@@ -1,0 +1,7 @@
+<tr>
+    <td><img ng-src="resources/img/{{ model.image }}" class="img-thumbnail img-responsive portada"></td>
+    <td>{{ model.title }}</td>
+    <td>{{ model.year }}</td>
+    <td ng-if="routeIsAlbums()">{{ model.band.name }}</td>
+    <td ng-if="routeIsAlbums() || routeIsBands()">{{ model.genre.name }}</td>
+</tr>

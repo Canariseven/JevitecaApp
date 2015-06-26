@@ -3,15 +3,10 @@
     <tbody>
     <tr class="text-primary">
         <td>Banda</td>
+        <td>Integrantes</td>
         <td>Origen</td>
-        <td>Albums</td>
+        <td>Albums: {{bands.length}}</td>
     </tr>
-    <tr ng-repeat="band in bands">
-        <td class="col-md-3">{{ band.name }}</td>
-        <td class="col-md-3">{{ band.origin }}</td>
-        <td albums-table albums="band.albums">
-        </td>
-
-    </tr>
+    <tr band ng-repeat="band in bands" model="band"></tr>
     </tbody>
 </table>
