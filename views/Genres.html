@@ -1,10 +1,12 @@
 <h1 class="text-center">Géneros</h1>
 <table class="table table-striped">
-    <tbody>
+
     <tr class="text-primary">
         <td>Género</td>
+        <td>Número de Albums:</td>
         <td>Albums</td>
     </tr>
-    <tr genre ng-repeat="genre in genres" model="genre"></tr>
+    <tbody>
+        <tr genre ng-repeat="genre in genres | filter:searchText " model="genre"></tr>
     </tbody>
 </table>

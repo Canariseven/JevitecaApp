@@ -1,4 +1,5 @@
 <tr>
     <td>{{ model.name }}</td>
+    <td>{{ model.albums.length }}</td>
     <td album ng-repeat="album in model.albums" model="album"></td>
 </tr>

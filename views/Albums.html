@@ -1,13 +1,15 @@
 <h1>Albums</h1>
 <table class="table table-striped ">
-    <tbody>
+
     <tr class="text-primary ">
         <td>Portada</td>
         <td>Título</td>
         <td>Año</td>
         <td>Banda</td>
         <td>Género</td>
+        <td>Favorito</td>
     </tr>
-    <tr album ng-repeat="album in albums" model="album"></tr>
+    <tbody>
+        <tr album ng-repeat="album in albums | filter:searchText " model="album"></tr>
     </tbody>
 </table>

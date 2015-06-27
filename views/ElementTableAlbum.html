@@ -1,0 +1,26 @@
+<tr>
+
+    <td class="col-md-2">
+        <img ng-src="resources/img/{{ model.image }}" class="img-thumbnail img-responsive portada">
+    </td>
+
+    <td class="col-md-6 pull-left">
+        <a ng-href="#/albums/{{ ::model.id }}/details">{{ model.title }}</a>
+    </td>
+
+    <td ng-if="routeIsAlbums()">{{ ::model.year }}</td>
+
+    <!--<td ng-if="routeIsAlbums()">{{ ::model.band.name }}</td>-->
+
+    <td class="col-md-6 pull-left">
+        <a ng-href="#/bands/{{ ::model.band.id }}/details">{{ ::model.band.name }}</a>
+    </td>
+
+
+    <td ng-if="routeIsAlbums()">{{ ::model.genre.name }}</td>
+
+    <td class="col-md-2">
+        <span favourites id-album="model.id"></span>
+    </td>
+
+</tr>

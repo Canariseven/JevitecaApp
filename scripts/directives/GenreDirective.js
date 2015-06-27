@@ -5,7 +5,7 @@ angular.module("JevitecaApp")
     .directive("genre", [function () {
         return {
             restrict: "AE",
-            templateUrl: "views/Genre.html",
+            templateUrl: "views/ElementTableGenre.html",
             replace: true,
             scope: {
                 model: "="

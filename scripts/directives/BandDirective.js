@@ -5,7 +5,7 @@ angular.module("JevitecaApp")
     .directive("band", [function () {
         return {
             restrict: "AE",
-            templateUrl: "views/Band.html",
+            templateUrl: "views/ElementTableBand.html",
             replace: true,
             scope: {
                 model: "="

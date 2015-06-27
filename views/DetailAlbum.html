@@ -1,0 +1,60 @@
+<section class="jumbotron">
+    <article class="container">
+        <header class="col-md-12">
+            <h1 class="text-center">{{album.title}} </h1>
+
+        <img class="col-md-6 col-md-offset-3" ng-src="resources/img/{{album.image}}">
+            <span class="col-md-12">
+
+            <h2 class="text-center" >Favorito : <span favourites id-album="model.id"></span></h2></span>
+        </header>
+        <div>
+            <nav class="navbar navbar-default col-md-3">
+                <div class="container-fluid ">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <span class="glyphicon glyphicon-calendar"><span> Año: {{::album.year}}</span></span>
+                        </a>
+                    </div>
+                </div>
+
+
+            </nav>
+            <nav class="navbar navbar-default col-md-5">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <span class="glyphicon glyphicon-fire"><span> Nombre:  {{ ::album.band.name}}</span></span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="navbar navbar-default col-md-4">
+                <div class="container-fluid ">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <span class="glyphicon glyphicon-flash"><span> Género: {{ ::album.genre.name}}</span></span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <nav class="navbar navbar-default col-md-4">
+                <div class="container-fluid ">
+                    <div class="navbar-header">
+                        <ul>
+                            <li ng-repeat="track in album.tracklist"><a href="#" ng-click="loadSong(album.title,track)">{{::track}}</a></li>
+                        </ul>
+                        <a class="text-right" ng-href="{{wikipedia}}" href="#" target="_blank"><img src="resources/img/wikipediaLogo.png"> {{album.title}} en Wikipedia </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="col-md-8" ng-controller="YoutubeSongsCtrl">
+                <iframe width="560" height="315" ng-src="{{song}}" frameborder="0" allowfullscreen ></iframe>
+            </div>
+        </div>
+    </article>
+</section>

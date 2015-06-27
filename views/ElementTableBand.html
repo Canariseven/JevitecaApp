@@ -1,0 +1,13 @@
+<tr>
+
+    <td class="col-md-2">
+        <a ng-href="#/bands/{{ ::model.id }}/details">{{ ::model.name }}</a>
+    </td>
+
+    <td class="col-md-1">{{ model.members.length }}</td>
+    <td class="col-md-3">
+        <p ng-repeat="member in model.members | orderBy:'name'">{{::member.name}}</p>
+    </td>
+    <!--<td class="col-md-6" albums-table albums="band.albums"></td>-->
+    <td album ng-repeat="album in model.albums" model="album"></td>
+</tr>

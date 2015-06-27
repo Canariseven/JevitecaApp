@@ -11,6 +11,7 @@
     <header class="text-center">
         <h1>JeviTeca</h1>
         <h3>La librería Heavy mas molona</h3>
+        <label>Búsqueda: <input ng-model="searchText"></label>
     </header>
     </div>
     <div class="container">
@@ -21,6 +22,7 @@
                 <li role="presentation" ng-class="{ 'active' : routeIsGenres() }"><a href="#/genres">Géneros</a></li>
             </ul>
         </nav>
+
         <section app-view-segment="0"></section>
     </div>
 <script src="vendor/angular.min.js"></script>
@@ -33,6 +35,9 @@
 <script src="scripts/controllers/AlbumsCtrl.js"></script>
 <script src="scripts/controllers/BandsCtrl.js"></script>
 <script src="scripts/controllers/GenresCtrl.js"></script>
+<script src="scripts/controllers/AbumDetailCtrl.js"></script>
+<script src="scripts/controllers/BandDetailCtrl.js"></script>
+<script src="scripts/controllers/YoutubeSongsCtrl.js"></script>
 
 <!-- Services -->
 <script src="scripts/services/AlbumsProvider.js"></script>
@@ -44,5 +49,11 @@
 <script src="scripts/directives/AlbumDirective.js"></script>
 <script src="scripts/directives/BandDirective.js"></script>
 <script src="scripts/directives/GenreDirective.js"></script>
+<script src="scripts/directives/favourites.js"></script>
+
+<!-- Directives externas-->
+<script src="https://www.youtube.com/iframe_api"></script>
+
+
 </body>
 </html>

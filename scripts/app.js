@@ -7,6 +7,8 @@ angular.module("JevitecaApp")
         $routeSegmentProvider.when("/albums","albums");
         $routeSegmentProvider.when("/bands","bands");
         $routeSegmentProvider.when("/genres","genres");
+        $routeSegmentProvider.when("/albums/:id/details", "album_detail");
+        $routeSegmentProvider.when("/bands/:id/details", "band_detail");
 
         $routeSegmentProvider.segment("albums",{
             controller: "AlbumsCtrl",
@@ -34,7 +36,25 @@ angular.module("JevitecaApp")
                     return GenresProvider.getGenres();
                 }]
             }
-        })
+        });
+        $routeSegmentProvider.segment( "album_detail", {
+            controller: "AlbumDetailCtrl",
+            templateUrl: "views/DetailAlbum.html",
+            resolve:{
+                Album : ["AlbumsProvider","$routeParams", function(AlbumsProvider,$routeParams){
+                    return AlbumsProvider.getAlbumWithId($routeParams.id);
+                }]
+            }
+        });
+        $routeSegmentProvider.segment( "band_detail", {
+            controller: "BandDetailCtrl",
+            templateUrl: "views/DetailBand.html",
+            resolve:{
+                Band : ["BandsProvider","$routeParams", function(BandsProvider,$routeParams){
+                    return BandsProvider.getBandWithId($routeParams.id);
+                }]
+            }
+        });
         $routeProvider.otherwise({
             redirectTo: "/albums"
         });

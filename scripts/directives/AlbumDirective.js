@@ -5,7 +5,7 @@ angular.module("JevitecaApp")
     .directive("album", ["$routeSegment", function ($routeSegment) {
         return {
             restrict: "AE",
-            templateUrl: "views/album.html",
+            templateUrl: "views/ElementTableAlbum.html",
             replace: true,
             scope: {
                 model: "="

@@ -1,12 +1,12 @@
 <h1>Bandas</h1>
 <table class="table table-striped">
-    <tbody>
     <tr class="text-primary">
         <td>Banda</td>
+        <td>Nº de integrantes</td>
         <td>Integrantes</td>
-        <td>Origen</td>
-        <td>Albums: {{bands.length}}</td>
+        <td>Albums</td>
     </tr>
-    <tr band ng-repeat="band in bands" model="band"></tr>
+    <tbody>
+        <tr band ng-repeat="band in bands | filter:searchText " model="band"></tr>
     </tbody>
 </table>

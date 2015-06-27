@@ -1,0 +1,29 @@
+<section class="jumbotron">
+    <article class="container">
+        <header class="col-md-12">
+            <h1 class="text-center">{{band.name}} </h1>
+            <section class="breadcrumb col-md-2 col-lg-offset-5">
+                <div class="btn-group-vertical" role="group">
+                    <li class="alert alert-success">Miembros <span class="badge">{{band.members.length}}</span></li>
+                    <a type="button" ng-href="{{getWikipediaLink(member.name)}}" target="_blank"
+                       class="btn btn-default"
+                       ng-repeat="member in band.members | orderBy:'name'">{{::member.name}}</a>
+                </div>
+            </section>
+        </header>
+    </article>
+</section>
+<section>
+    <header class="text-center"><h2>Albums</h2></header>
+    <table class="table table-striped">
+        <tr class="text-primary ">
+            <td>Portada</td>
+            <td>Título</td>
+            <td>Favorito</td>
+        </tr>
+        <tbody>
+        <tr album ng-repeat="album in band.albums" model="album"></tr>
+    </table>
+
+
+</section>
