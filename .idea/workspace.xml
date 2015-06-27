@@ -1,27 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a812c9dd-96d2-431d-a8db-703649209ba3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/img/wikipediaLogo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/controllers/AbumDetailCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/controllers/BandDetailCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/DetailAlbum.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/DetailBand.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/Favourites.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/directives/favourites.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/Band.html" afterPath="$PROJECT_DIR$/views/ElementTableBand.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/Genre.html" afterPath="$PROJECT_DIR$/views/ElementTableGenre.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/album.html" afterPath="$PROJECT_DIR$/views/ElementTableAlbum.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/directives/AlbumDirective.js" afterPath="$PROJECT_DIR$/scripts/directives/AlbumDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/Albums.html" afterPath="$PROJECT_DIR$/views/Albums.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/services/AlbumsProvider.js" afterPath="$PROJECT_DIR$/scripts/services/AlbumsProvider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/directives/BandDirective.js" afterPath="$PROJECT_DIR$/scripts/directives/BandDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/Bands.html" afterPath="$PROJECT_DIR$/views/Bands.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/services/BandsProvider.js" afterPath="$PROJECT_DIR$/scripts/services/BandsProvider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/directives/GenreDirective.js" afterPath="$PROJECT_DIR$/scripts/directives/GenreDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/Genres.html" afterPath="$PROJECT_DIR$/views/Genres.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app.js" afterPath="$PROJECT_DIR$/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    <list default="true" id="a812c9dd-96d2-431d-a8db-703649209ba3" name="Default" comment="Wikipedia&#10;Videos de Youtube Integrados -&gt; API Google&#10;Vista album detalle&#10;Vista Banda detalle">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/controllers/YoutubeSongsCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="practicaAngular.iws" />
@@ -106,7 +87,7 @@
       <file leaf-file-name="YoutubeSongsCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/controllers/YoutubeSongsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06849315">
+            <state vertical-scroll-proportion="0.045454547">
               <caret line="4" column="115" selection-start-line="4" selection-start-column="115" selection-end-line="4" selection-end-column="115" />
               <folding />
             </state>
@@ -483,14 +464,20 @@
       <option name="project" value="LOCAL" />
       <updated>1435262685938</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Wikipedia&#10;Videos de Youtube Integrados -&gt; API Google&#10;Vista album detalle&#10;Vista Banda detalle">
+      <created>1435440726329</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1435440726329</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-577" y="-1417" width="2560" height="1417" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32937685" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937685" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -927,7 +914,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/controllers/YoutubeSongsCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06849315">
+        <state vertical-scroll-proportion="0.045454547">
           <caret line="4" column="115" selection-start-line="4" selection-start-column="115" selection-end-line="4" selection-end-column="115" />
           <folding />
         </state>
