@@ -2,15 +2,15 @@
  * Created by Canariseven on 22/6/15.
  */
 angular.module("JevitecaApp")
-    .service("AlbumsProvider", ["$http", "$q", "$filter", function ($http, $q, $filter) {
+    .service("AlbumsProvider", ["$http", "$q", "$filter","Settings", function ($http, $q, $filter,Settings) {
         this.getAlbums = function () {
-            var datos = $http.get("resources/data/albums.json");
+            var datos = $http.get(Settings.json_albums);
             return datos
         };
 
         this.getAlbumWithId = function (albumId) {
             var deferred = $q.defer();
-            $http.get("resources/data/albums.json").then(function (data) {
+            $http.get(Settings.json_albums).then(function (data) {
                 var element = $filter("filter")(data.data, {"id": albumId})[0];
                 deferred.resolve(element);
             });
@@ -18,11 +18,10 @@ angular.module("JevitecaApp")
         };
 
         this.queryYoutube = function (query) {
-            var Key_API_GOOGLE = "AIzaSyBzO86cIFiDdZOXS8dCE2rbYX4mQEh8Ks4";
             var deferred = $q.defer();
-            $http.get('https://www.googleapis.com/youtube/v3/search', {
+            $http.get(Settings.youtube_search, {
                 params: {
-                    key: Key_API_GOOGLE,
+                    key: Settings.api_key_google,
                     type: 'video',
                     maxResults: '12',
                     part: 'id, snippet',
